@@ -3,9 +3,9 @@
 
 #define DHTPIN D3 // the LED
 
-#define DHTTYPE DHT11
+#define DHTTYPE DHT11 //the sensor version
 
-#define DELAY_TIME 3000
+#define DELAY_TIME 3000 //static function
 
 DHT dht(DHTPIN,DHTTYPE);
 
@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-    delay(DELAY_TIME);
+    delay(DELAY_TIME); // calls the static DELAY_TIME function instead of having to type a value
     String temp = String(dht.getTempCelcius());
     Particle.publish("temp", temp, PRIVATE);
 

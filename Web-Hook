@@ -9,7 +9,8 @@
 
 DHT dht(DHTPIN,DHTTYPE);
 
-void setup() {
+void setup() 
+{
     dht.begin();
 }
 

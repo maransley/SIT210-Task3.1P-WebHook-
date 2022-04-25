@@ -10,14 +10,11 @@
 DHT dht(DHTPIN,DHTTYPE);
 
 void setup() {
-
     dht.begin();
-
 }
 
 void loop() {
     delay(DELAY_TIME); // calls the static DELAY_TIME instead of having to type a value
     String temp = String(dht.getTempCelcius());
     Particle.publish("temp", temp, PRIVATE);
-
 }
